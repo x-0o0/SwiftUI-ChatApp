@@ -7,7 +7,7 @@ Chat app using SendbirdChat Swift Package in SwiftUI
 
 ![Swift 5.5](https://img.shields.io/badge/Swift-5.5+-fa7343?style=for-the-badge&logo=swift&logoColor=white)
 ![SwiftUI 3](https://img.shields.io/badge/SwiftUI-3+-blue?style=for-the-badge&logo=swift&logoColor=white)
-![Xcode 13 beta](https://img.shields.io/badge/Xcode-13-beta-1575F9?style=for-the-badge&logo=xcode&logoColor=white)
+![Xcode 13 beta](https://img.shields.io/badge/Xcode-13_beta+-1575F9?style=for-the-badge&logo=xcode&logoColor=white)
 ![iOS 15+](https://img.shields.io/badge/iOS-15+-999999?style=for-the-badge&logo=apple&logoColor=white)
 
 ## Requirements
