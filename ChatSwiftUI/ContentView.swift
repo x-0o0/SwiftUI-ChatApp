@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var chatState: SendbirdChatState
     var body: some View {
         Text("Hello, world!")
             .padding()
+            .popover(isPresented: $chatState.signInRequired) {
+                SignInView()
+            }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    struct Preview: View {
+        @StateObject private var chatState = SendbirdChatState(appID: "")
+        
+        var body: some View {
+            ContentView()
+                .environmentObject(chatState)
+        }
+    }
     static var previews: some View {
-        ContentView()
+        Preview()
+            .previewLayout(.sizeThatFits)
     }
 }

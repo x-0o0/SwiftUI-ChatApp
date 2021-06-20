@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftPackage-SendbirdChat",
+        "repositoryURL": "https://github.com/jaesung-0o0/SwiftPackage-SendbirdChat",
+        "state": {
+          "branch": null,
+          "revision": "80cb745af9cb7eb69e87838db2938adcb4dd96c0",
+          "version": "0.1.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
