@@ -39,8 +39,10 @@ See `SendbirdChatState`
 
 ### View hierarchy
 
-`ChannelList`
-    - `ChannelRow`
+```swift
+ChannelList
+ ㄴ ChannelRow
+```
 
 ## Channel
 
@@ -49,8 +51,12 @@ See `SendbirdChatState`
 See `GroupChannelState`
 
 ### View hierarchy
-
-`ChannelView`
-    - `MessageList`
-        - `MessageRow`
-    - `MessageInputField`
+```swift
+ChannelView
+ ㄴ MessageList
+    ㄴ MessageRow
+    ㄴ MessageRow
+    ...
+    ㄴ MessageRow
+ ㄴ MessageInputField
+```
