@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A91A8842267F36DF000CD2D3 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A8841267F36DE000CD2D3 /* ChannelView.swift */; };
+		A91A8844267F3D6C000CD2D3 /* NSObject.ChatSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A8843267F3D6C000CD2D3 /* NSObject.ChatSwiftUI.swift */; };
+		A91A8846267F4643000CD2D3 /* MessageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A8845267F4643000CD2D3 /* MessageRow.swift */; };
+		A91A884A267F54B9000CD2D3 /* MessageInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A8849267F54B9000CD2D3 /* MessageInputField.swift */; };
+		A91A884C267F5B51000CD2D3 /* GroupChannelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A884B267F5B51000CD2D3 /* GroupChannelState.swift */; };
+		A91A884E267F5C27000CD2D3 /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A884D267F5C27000CD2D3 /* MessageList.swift */; };
+		A91A8850267F69E4000CD2D3 /* SBDBaseMessage.ChatSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A884F267F69E4000CD2D3 /* SBDBaseMessage.ChatSwiftUI.swift */; };
 		A9A7A526267EEC2300894886 /* ChatSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A7A525267EEC2300894886 /* ChatSwiftUIApp.swift */; };
 		A9A7A528267EEC2300894886 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A7A527267EEC2300894886 /* ContentView.swift */; };
 		A9A7A52A267EEC2400894886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A7A529267EEC2400894886 /* Assets.xcassets */; };
@@ -22,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A91A8841267F36DE000CD2D3 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
+		A91A8843267F3D6C000CD2D3 /* NSObject.ChatSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.ChatSwiftUI.swift; sourceTree = "<group>"; };
+		A91A8845267F4643000CD2D3 /* MessageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRow.swift; sourceTree = "<group>"; };
+		A91A8849267F54B9000CD2D3 /* MessageInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputField.swift; sourceTree = "<group>"; };
+		A91A884B267F5B51000CD2D3 /* GroupChannelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChannelState.swift; sourceTree = "<group>"; };
+		A91A884D267F5C27000CD2D3 /* MessageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
+		A91A884F267F69E4000CD2D3 /* SBDBaseMessage.ChatSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBDBaseMessage.ChatSwiftUI.swift; sourceTree = "<group>"; };
 		A9A7A522267EEC2300894886 /* ChatSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A7A525267EEC2300894886 /* ChatSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSwiftUIApp.swift; sourceTree = "<group>"; };
 		A9A7A527267EEC2300894886 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +63,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A91A8840267F36C5000CD2D3 /* Channel */ = {
+			isa = PBXGroup;
+			children = (
+				A91A8841267F36DE000CD2D3 /* ChannelView.swift */,
+				A91A884D267F5C27000CD2D3 /* MessageList.swift */,
+				A91A8845267F4643000CD2D3 /* MessageRow.swift */,
+				A91A8849267F54B9000CD2D3 /* MessageInputField.swift */,
+			);
+			path = Channel;
+			sourceTree = "<group>";
+		};
 		A9A7A519267EEC2300894886 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +97,7 @@
 				A9A7A525267EEC2300894886 /* ChatSwiftUIApp.swift */,
 				A9A7A548267F0F5400894886 /* ViewModel */,
 				A9A7A527267EEC2300894886 /* ContentView.swift */,
+				A91A8840267F36C5000CD2D3 /* Channel */,
 				A9A7A546267F0F3B00894886 /* Channel list */,
 				A9A7A547267F0F4600894886 /* Sign in */,
 				A9A7A543267F0D8A00894886 /* Extensions */,
@@ -94,6 +120,8 @@
 			children = (
 				A9A7A53F267F0A8300894886 /* SBDGroupChannel.ChatSwiftUI.swift */,
 				A9A7A541267F0D8300894886 /* SBDUser.ChatSwiftUI.swift */,
+				A91A8843267F3D6C000CD2D3 /* NSObject.ChatSwiftUI.swift */,
+				A91A884F267F69E4000CD2D3 /* SBDBaseMessage.ChatSwiftUI.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -119,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				A9A7A538267EEC5200894886 /* SendbirdChatState.swift */,
+				A91A884B267F5B51000CD2D3 /* GroupChannelState.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -201,11 +230,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9A7A540267F0A8300894886 /* SBDGroupChannel.ChatSwiftUI.swift in Sources */,
+				A91A8846267F4643000CD2D3 /* MessageRow.swift in Sources */,
 				A9A7A539267EEC5200894886 /* SendbirdChatState.swift in Sources */,
+				A91A884A267F54B9000CD2D3 /* MessageInputField.swift in Sources */,
+				A91A8850267F69E4000CD2D3 /* SBDBaseMessage.ChatSwiftUI.swift in Sources */,
 				A9A7A542267F0D8300894886 /* SBDUser.ChatSwiftUI.swift in Sources */,
+				A91A884E267F5C27000CD2D3 /* MessageList.swift in Sources */,
+				A91A8842267F36DF000CD2D3 /* ChannelView.swift in Sources */,
 				A9A7A528267EEC2300894886 /* ContentView.swift in Sources */,
 				A9A7A545267F0F2600894886 /* ChannelRow.swift in Sources */,
+				A91A8844267F3D6C000CD2D3 /* NSObject.ChatSwiftUI.swift in Sources */,
 				A9A7A53C267EF1D000894886 /* SignInView.swift in Sources */,
+				A91A884C267F5B51000CD2D3 /* GroupChannelState.swift in Sources */,
 				A9A7A526267EEC2300894886 /* ChatSwiftUIApp.swift in Sources */,
 				A9A7A53E267EFB3400894886 /* ChannelList.swift in Sources */,
 			);

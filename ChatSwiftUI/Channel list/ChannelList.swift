@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct ChannelList: View {
+    @EnvironmentObject private var chatState: SendbirdChatState
+    
     var body: some View {
-        Text("")
+        NavigationView {
+            List(chatState.channelList, id: \.self) { channel in
+                NavigationLink {
+                    ChannelView(channel: channel)
+                } label: {
+                    ChannelRow(channel: channel)
+                }
+            }
+        }
     }
 }
 

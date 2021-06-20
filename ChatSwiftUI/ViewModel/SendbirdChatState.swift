@@ -12,6 +12,7 @@ import SendbirdChat
 class SendbirdChatState: ObservableObject {
     @Published var signInRequired: Bool = true
     @Published var error: String?
+    @Published var channelList: [SBDGroupChannel] = []
     
     var currentUser: SBDUser? { SendbirdChat.currentUser }
     
@@ -34,6 +35,7 @@ class SendbirdChatState: ObservableObject {
                 }
             } receiveValue: { user in
                 self.signInRequired = false
+                self.fetchChannelList()
             }
             .store(in: &subscribers)
     }
@@ -43,5 +45,25 @@ class SendbirdChatState: ObservableObject {
             .disconnectionPublisher()
             .sink { self.signInRequired = true }
             .store(in: &subscribers)
+    }
+    
+    func fetchChannelList() {
+        let listQuery = SBDGroupChannel.createMyGroupChannelListQuery()
+        listQuery?.includeEmptyChannel = true
+        listQuery?.memberStateFilter = .stateFilterJoinedOnly
+        listQuery?.order = .latestLastMessage
+        listQuery?.limit = 15
+        
+        listQuery?.loadNextPage { (groupChannels, error) in
+            if let groupChannels = groupChannels {
+                self.channelList.append(contentsOf: groupChannels)
+            }
+            else if let error = error {
+                print(error.localizedDescription)
+            }
+            else {
+                return
+            }
+        }
     }
 }

@@ -31,32 +31,45 @@ struct ChannelRow: View {
             }
             
             VStack(alignment: .leading) {
-                Text(channel.name)
-                    .bold()
+                HStack {
+                    Text(channel.name)
+                        .bold()
+                    
+                    unreadCountView
+
+                    Spacer()
+                    
+                    notificationView
+                }
                 
                 HStack {
                     Text(channel.lastMessage?.message ?? "No message")
                         .foregroundColor(.secondary)
+                        .lineLimit(1)
                     
                     Text(channel.lastUpdatedAtToDate(), style: .date)
                         .foregroundColor(.secondary)
-                    
-                    Text(channel.unreadMessageCountToString())
-                        .foregroundColor(.white)
-                        .padding(3)
-                        .background(Circle().foregroundColor(.red))
-                        .opacity(channel.unreadMessageCount == 0 ? 0.0 : 1.0)
+                        .lineLimit(1)
                 }
                 .font(.caption)
             }
-            
-            Spacer()
-            
-            Image(systemName: "bell.slash")
-                .foregroundColor(.red)
-                .opacity(channel.myPushTriggerOption != .off ? 0.0 : 1.0)
-                .padding(16)
         }
+    }
+    
+    var unreadCountView: some View {
+        Text(channel.unreadMessageCountToString())
+            .foregroundColor(.white)
+            .lineLimit(1)
+            .padding(3)
+            .background(Circle().foregroundColor(.red))
+            .opacity(channel.unreadMessageCount == 0 ? 0.0 : 1.0)
+    }
+    
+    var notificationView: some View {
+        Image(systemName: "bell.slash")
+            .foregroundColor(.red)
+            .opacity(channel.myPushTriggerOption != .off ? 0.0 : 1.0)
+            .padding(16)
     }
 }
 

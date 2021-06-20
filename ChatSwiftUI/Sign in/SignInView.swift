@@ -40,9 +40,11 @@ struct SignInView: View {
             Button("Sign In") {
                 if userID.isEmpty {
                     focusedField = .userIDField
-                } else if accessToken.isEmpty {
-                    focusedField = .accessTokenField
-                } else {
+                }
+//                else if accessToken.isEmpty {
+//                    focusedField = .accessTokenField
+//                }
+                else {
                     chatState.signIn(
                         with: userID,
                         accessToken: accessToken
@@ -56,7 +58,7 @@ struct SignInView: View {
 
 struct SignInView_Previews: PreviewProvider {
     struct Preview: View {
-        @StateObject private var chatState = SendbirdChatState(appID: "")
+        @StateObject private var chatState = SendbirdChatState(appID: appID)
         
         var body: some View {
             SignInView()
